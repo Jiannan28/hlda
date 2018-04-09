@@ -1,8 +1,7 @@
+from __future__ import print_function
 import csv
 from math import log
 import sys
-from __future__ import print_function
-
 from numpy.random import RandomState
 
 import numpy as np
