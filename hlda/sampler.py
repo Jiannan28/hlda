@@ -1,6 +1,7 @@
 import csv
 from math import log
 import sys
+from __future__ import print_function
 
 from numpy.random import RandomState
 
@@ -186,7 +187,7 @@ class HierarchicalLDA(object):
 
     def estimate(self, num_samples, display_topics=50, n_words=5, with_weights=True):
 
-        print 'HierarchicalLDA sampling\n'
+        print('HierarchicalLDA sampling\n')
         for s in range(num_samples):
 
             sys.stdout.write('.')
@@ -198,7 +199,7 @@ class HierarchicalLDA(object):
                 self.sample_topics(d)
 
             if (s > 0) and ((s+1) % display_topics == 0):
-                print " %d" % (s+1)
+                print(" %d" % (s+1))
                 self.print_nodes(n_words, with_weights)
                 print
 
@@ -384,7 +385,7 @@ class HierarchicalLDA(object):
         out = '    ' * indent
         out += 'topic=%d level=%d (documents=%d): ' % (node.node_id, node.level, node.customers)
         out += node.get_top_words(n_words, with_weights)
-        print out
+        print(out)
         for child in node.children:
             self.print_node(child, indent+1, n_words, with_weights)
 

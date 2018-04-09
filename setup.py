@@ -1,13 +1,13 @@
-from distutils.core import setup
+from setuptools import setup
+
 setup(
-  name = 'hlda',
-  packages = ['hlda'], # this must be the same as the name above
-  version = '0.2',
-  description = 'Gibbs sampler for the Hierarchical Latent Dirichlet Allocation topic model. This is based on the hLDA implementation from Mallet, having a fixed depth on the nCRP tree.',
-  author = 'Joe Wandy',
-  author_email = 'joewandy@gmail.com',
-  url = 'https://github.com/joewandy/hlda', # use the URL to the github repo
-  download_url = 'https://github.com/joewandy/hlda/archive/0.2.tar.gz', # I'll explain this in a second
-  keywords = ['topic', 'model', 'lda', 'gibbs', 'sampler', 'hlda'], # arbitrary keywords
-  classifiers = [],
+	name = 'py3hlda',
+	packages = ['py3hlda'],
+	version = '0.1',
+	description = 'Gibbs sampler for the Hierarchical Latent Dirichlet Allocation topic model. This is based on the hLDA implementation from Mallet, having a fixed depth on the nCRP tree.',
+	author = 'co',
+	url = 'https://github.com/Jiannan28/hlda', 
+	keywords = ['topic', 'model', 'lda', 'gibbs', 'sampler', 'hlda'], 
+	classifiers = [],
+	zip_safe=False
 )
